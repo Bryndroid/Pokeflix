@@ -1,0 +1,10 @@
+<!--Voy a poner acá los componentes ya que en home iran las tarjetas de los pokemones. Esto es debido a  que si decido agregar otra cosa que no sea la tarjeta de los pokemones, y quiero agregar un quizz, pues que ese quiz vaya en pages y se renderize en Router outlet-->
+<app-header></app-header>
+<main>
+    <div #fnd class ="fnd">
+        <!--Enviando un valor desde este layout a mi hijo, app sidebar :O.Con input, input es como una puerta que deja que se pueda recibir datos-->
+        <!--EL ANGULAR PNDJO TE COLOCA EL IMPORT DE EVENT EMITTER COMO STREAM Y ESO DA ERROR ZXD-->
+        <app-sidebar [data]="data2" (ocultoSidebar)="ifSidebar($event)"></app-sidebar><router-outlet></router-outlet>
+    </div>
+</main>
+<app-footer></app-footer>

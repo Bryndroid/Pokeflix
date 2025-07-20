@@ -1,0 +1,25 @@
+.fnd{
+    display: flex;
+    height: 100%;
+    width:100%;
+    flex-wrap: nowrap;
+}
+main{
+    background-color: #f0e9e5;
+    height: 75%;
+    width: 100%;
+    /*Para acceder a public desde CSS se ocupa /
+    */
+    background-image: url("/POKEBOLA.png");
+    background-position: 0%;
+    background-repeat: repeat;
+    background-size:50px 50px;
+}
+@media (max-width:875px){
+  .fnd{
+    flex-direction: column;
+  }
+  main{
+    height: auto;
+  }
+}

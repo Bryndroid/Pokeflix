@@ -1,0 +1,20 @@
+<section id ="frm">
+    <header>
+        <h1>¡Bienvenido a Pokeflix!</h1>
+        <br>
+        <p>Aqui conoceras más acerca de nuestros protagonistas peludos (no tanto)</p>
+    </header>
+    <nav>
+        <h2>¿Como te indentificamos mientras navegas con Nosotros?</h2>
+        <p><small>Solamente digita tu  nombre hipermegaencantador </small></p>
+        <!--Vamos a ocupar FormReactive para medio validar. (o buscar otra forma de validar)-->
+        <form (ngSubmit)="onClick()">
+            <input id = "name" type ="text"  [formControl] = "name"><button id ="btn">INGRESAR</button>
+        </form>
+       @if(error !=""){
+        <div class ="error">
+            **{{error}}**
+        </div>
+       }
+    </nav>
+</section>

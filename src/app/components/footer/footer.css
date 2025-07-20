@@ -1,0 +1,13 @@
+#bkg{
+    height: 10%;
+    background-color: #24201D;
+    color: #E9652B;
+}
+.cks{
+    text-align: center;
+}
+@media (max-width:875px){
+  #bkg{
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,232 @@
+#bkg222{
+  height: 100%;
+  overflow-y: auto;
+}
+#tipos{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom:10px;
+  height: auto;
+}
+.ddd{
+  background-color: black;
+  color: #f7f7f7;
+}
+#tipos .tps{
+   cursor: pointer;
+}
+.gp20{
+ gap:40px;
+}
+div{
+  border-radius: 10px;
+  border: 2px solid #000;
+  padding: 5px;
+  color: aliceblue;
+  font-weight: bold;
+}
+/*-----------------------------------*/
+.fire{
+  background-color: brown;
+}
+.water{
+  background-color: blue;
+}
+.normal{
+  background-color: aliceblue;
+  color: #000 !important;
+}
+.grass{
+  background-color: green;
+}
+.electric{
+  background-color: yellow;
+  color: #000 !important;
+}
+.ice{
+  background-color: aqua;
+  color: #000 !important;;
+}
+.fighting{
+  background-color: chocolate;
+}
+.poison{
+  background-color: darkgreen;
+}
+.ground{
+  background-color: saddlebrown;
+}
+.flying{
+  background-color:gainsboro;
+  color:black !important;
+}
+.psychic{
+  background-color: blueviolet;
+}
+.bug{
+  background-color: darkslategrey;
+}
+.rock{
+  background-color: rgb(170, 167, 167);
+}
+.ghost{
+  background-color: khaki;
+  color: black !important;
+}
+.dragon{
+  background-color: rgb(74, 0, 143);
+}
+.dark{
+  background-color: black;
+}
+.steel{
+  background-color: dimgray;
+}
+.fairy{
+  background-color: pink;
+  color: black !important;
+}
+/*-----------------------------------*/
+.carta{
+  height: 23em;
+  width: 18.3em;
+  background-color: rgba(220, 223, 205, 0.911);
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px ;
+  z-index: 2;
+}
+.t3x{
+  text-align: center;
+  position: relative;
+  color: black;
+  height: 10%;
+  border: none;
+}
+.t3x p{
+  display: block;
+  float: right;
+  position: absolute;
+  left: 90%;
+  bottom: 0;
+  top: 0;
+}
+#tps{
+  width: 100%;
+  height: 20%;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+}
+#idPokebkg{
+  position: absolute;
+  left: 15%;
+  top: 25%;
+  font-size: 100px;
+  z-index: -1;
+  color: gray
+}
+.carta img{
+  width: 60%;
+  height: 60%;
+}
+#cartas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 85%;
+  padding: 20px;
+}
+#info{
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:30px;
+  padding-bottom: 10px;
+}
+.peso, .altura{
+  background-color: gray;
+  color: black;
+  font-size: bold;
+}
+ .pokeball-button {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(to bottom, #ff1c1c 50%, #fff 50%);
+      border: 4px solid #000;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.2s;
+      margin: 0 auto;
+    }
+
+    .pokeball-button:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: black;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .pokeball-button::after{
+      content:"";
+      position: absolute;
+      left: 35%;
+      right:0;
+      top:35%;
+      bottom: 0;
+      height: 20px;
+      width: 20px;
+      border-radius:999px;
+      background-color: #f7f7f7;
+      border:4px solid black ;
+      
+    }
+/*-------------------------------------------------------*/
+/*Animaciones*/
+.animation {
+  animation: var 1s ease-in-out;
+  transition: all 0.3s ease;
+}
+.animation:hover{
+  transform: rotate(5deg) rotateY(5deg) scale(1.05);
+  border-color:red ;
+  box-shadow: 20px 20px 40px rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+@keyframes var {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*-------------------------------------------------------*/
+/*Media Queries*/
+@media (max-width:875px){
+  .carta{
+    width: 15.5em;
+  }
+  #cartas{
+    justify-content: space-around;
+  }
+}

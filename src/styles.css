@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+/*GLOOBAL VAIINA*/
+img{
+    width: 100%;
+    height: 100%;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+   margin: 0;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}

@@ -1,0 +1,80 @@
+.nmd{
+    position:relative;
+ display: flex;
+ align-items: center;
+ flex-direction: column-reverse;
+ align-content: center;
+ flex-wrap: nowrap;
+ z-index: 1;
+ height: 70%;
+ padding: 10px;
+}
+#fnd{
+    width: 100%;
+    height: 15%;
+    color: aliceblue;;
+    background-color: #782929;
+    background-image: url("/bkg.png");
+    background-position:100% 50%;
+    background-size: 500px 400px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lgo{
+    width: 20%;
+    height: 100%;
+    padding: 20px;
+    align-self: flex-start;
+}
+.lgo img{
+    border-radius: 10px;
+}
+.vtn{
+    padding: 5%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#icon1{
+    width: 10%;
+    font-size: 48px;
+    color:aliceblue;
+    margin-right:20px;
+}
+/*----------------------*/
+.dsl{
+background-color: rgba(29, 28, 28, 0.801);
+  color: #f3f3f3;
+  border: 2px solid #271b1b;
+  padding: 1em;
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  font-family: 'Segoe UI', sans-serif;
+}
+.dsl::after{
+    background-color: rgba(211, 30, 30, 0.829);
+ border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+    inset: 0;
+    content: "";
+    z-index: -2;
+    position: absolute;
+}
+.dsl:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.dsl:active{
+    transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}

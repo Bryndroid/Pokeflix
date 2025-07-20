@@ -1,0 +1,29 @@
+
+@if(mostrarSidebar == true){
+<section id="bkg" [ngClass]="'activo'">
+   <button class ="dentro " (click) ="mostrar()">
+       |||
+    </button>
+    <section id ="contenido">
+      <div class ="brt">
+        <!--Filtro por tipos de pokemon-->
+        <p>¿Que quieres ver?</p>
+        <hr><br>
+        <input type ="text" placeholder="Fuego...">
+        <button>Agregar pokemon</button>
+     </div>
+     <br>
+     <div class = "mst">
+      <ul>
+        <li>Se mostraran opciones...</li>
+        <li>{{data}}</li>
+       </ul>
+     </div>
+      </section>
+</section>
+ }@else{
+ <button id="rtr"  (click) ="mostrar()" >
+      <strong>| | |</strong>
+      <p>Menú</p>
+    </button>
+ }

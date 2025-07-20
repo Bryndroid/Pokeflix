@@ -1,0 +1,99 @@
+<section id ="bkg222">
+   <!--Falta traducir al ingles todo, o cambiar esto a español.-->
+   <section id = "tipos">
+      <div #mg1 class ="tps fire" (click) = "tipoPokemon(mg1.textContent)">
+         Fire
+      </div>
+      <div #mg2 class ="tps water" (click) = "tipoPokemon(mg2.textContent)">
+         water
+      </div>
+      <div #mg3 class ="tps normal" (click) = "tipoPokemon(mg3.textContent)">
+         Normal
+      </div>
+      <div #mg4 class ="tps grass" (click) = "tipoPokemon(mg4.textContent)">
+         Grass
+      </div>
+      <div  #mg5 class ="tps electric" (click) = "tipoPokemon(mg5.textContent)">
+        Electric
+      </div>
+      <div #mg6 class ="tps ice" (click) = "tipoPokemon(mg6.textContent)">
+         Ice
+      </div>
+      <div #mg7 class ="tps fighting" (click) = "tipoPokemon(mg7.textContent)">
+         Fighting
+      </div>
+      <div #mg8 class ="tps poison" (click) = "tipoPokemon(mg8.textContent)">
+         Poison
+      </div>
+      <div #mg9 class ="tps ground" (click) = "tipoPokemon(mg9.textContent)">
+         Ground
+      </div>
+      <div #mg10 class ="tps flying" (click) = "tipoPokemon(mg10.textContent)">
+         Flying
+      </div>
+      <div #mg11 class ="tps psychic"(click) = "tipoPokemon(mg11.textContent)">
+         Psychic
+      </div>
+      <div #mg12 class ="tps bug" (click) = "tipoPokemon(mg12.textContent)">
+         Bug
+      </div>
+      <div #mg13 class ="tps rock" (click) = "tipoPokemon(mg13.textContent)">
+         Rock
+      </div>
+      <div #mg14 class ="tps ghost" (click) = "tipoPokemon(mg14.textContent)">
+         Ghost
+      </div>
+      <div #mg15 class ="tps dragon" (click) = "tipoPokemon(mg15.textContent)">
+         Dragon
+      </div>
+      <div #mg16 class ="tps dark" (click) = "tipoPokemon(mg16.textContent)">
+         Dark
+      </div>
+      <div #mg17 class ="tps steel" (click) = "tipoPokemon(mg17.textContent)">
+         Steel
+      </div>
+      <div #mg18 class ="tps fairy" (click) = "tipoPokemon(mg18.textContent)">
+        Fairy
+      </div>
+      <div class = "ddd"(click) ="originalOrder()">Order</div>
+   </section>
+      <section id="cartas" [ngClass] = "{'gp20': oyente1==false}">
+          @if(!cargado && Pokemons.length === 0){
+                  <p><strong>CARGANDO........................</strong></p>
+               }
+            @else {
+                  @for (item of Pokemons; track item.id) {
+                  <!--No funciona si se coloca click en un div, el evento click-->
+                        <div class ="carta uno animation" (mouseover)="gifPokemon(item)" (mouseout)="resetPokegif(item)">
+                           <div class ="t3x">
+                              <h3 id ="nme">{{item.name}}</h3>
+                              <p id ="idPoke">#{{item.id}}</p>
+                           </div>
+                           <p id ="idPokebkg">#{{item.id}}</p>
+                           <img [src] ="item.sprites.front_default">
+                           <section id ="tps">
+                              <div class = "tps" class = "{{item.types[0].type.name}}">
+                                 {{item.types[0].type.name}}
+                              </div>
+                              @if(item.types.length ==2){
+                                  <div class = "tps" class = "{{item.types[1].type.name}}">
+                                 {{item.types[1].type.name}}
+                              </div>
+                              }
+                           </section>
+                           <section id ="info">
+                              <div class ="peso">
+                                 {{item.weight}} kg
+                              </div>
+                              <div class ="altura">
+                                 {{item.height}} m
+                              </div>
+                           </section>
+                    </div>
+               }
+            }
+            @if(!cargado && Pokemons.length >0){
+                <button class="pokeball-button" (click) = "onClick()"></button>
+            }
+      </section>
+</section>
